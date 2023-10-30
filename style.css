@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.auction-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auction-item h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.bid-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bid-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Additional styling for even and odd items */
+.auction-item:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.auction-item:nth-child(odd) {
+    background-color: #fff;
+}

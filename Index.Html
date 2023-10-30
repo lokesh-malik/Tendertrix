@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tendertrix</title>
+</head>
+<body>
+    <header>
+        <h1>Tendertrix</h1>
+    </header>
+    <main>
+        <section class="auction-item" id="item1">
+            <h2>Item 1: Example Item</h2>
+            <p>Description: This is an example item for demonstration purposes.</p>
+            <p>Current Bid: $100</p>
+            <button class="bid-button" onclick="placeBid('item1', 100)">Place Bid</button>
+        </section>
+        <section class="auction-item" id="item2">
+            <h2>Item 2: Another Example Item</h2>
+            <p>Description: Another example item to demonstrate the listing.</p>
+            <p>Current Bid: $75</p>
+            <button class="bid-button" onclick="placeBid('item2', 75)">Place Bid</button>
+        </section>
+        <section class="auction-item" id="item3">
+            <h2>Item 3: Yet Another Example Item</h2>
+            <p>Description: A third example item to expand the listing.</p>
+            <p>Current Bid: $50</p>
+            <button class="bid-button" onclick="placeBid('item3', 50)">Place Bid</button>
+        </section>
+        <section class="auction-item" id="item4">
+            <h2>Item 4: New Arrival</h2>
+            <p>Description: This is a brand new item up for auction.</p>
+            <p>Current Bid: $120</p>
+            <button class="bid-button" onclick="placeBid('item4', 120)">Place Bid</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 MSTC Auctions</p>
+    </footer>
+
+    <script>
+        function placeBid(itemId, currentBid) {
+            const bidAmount = prompt("Enter your bid amount:");
+            if (bidAmount !== null) {
+                bidAmount = parseFloat(bidAmount);
+                if (!isNaN(bidAmount) && bidAmount > currentBid) {
+                    document.getElementById(itemId).querySelector("p:nth-child(3)").textContent = `Current Bid: $${bidAmount}`;
+                } else {
+                    alert("Invalid bid amount. Please enter a valid amount higher than the current bid.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
